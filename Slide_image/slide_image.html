@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide image</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .container {
+        position: relative;
+      }
+      .slide {
+        width: 100%;
+        display: none;
+        position: relative;
+        transition: all 10s;
+      }
+      .slide img {
+        width: 100%;
+        height: 400px;
+      }
+      .show {
+        display: block;
+      }
+      .slide p {
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+        background-color: rgba(0, 0, 0, 0.299);
+        color: white;
+        padding: 5px 20px;
+        font-size: 30px;
+      }
+
+      .arrow {
+        font-size: 40px;
+        background-color: rgba(7, 7, 7, 0.731);
+        position: absolute;
+        clip-path: circle();
+        padding: 10px;
+        font-weight: 800;
+        color: white;
+        cursor: pointer;
+      }
+      #next {
+        top: 40%;
+        right: 10px;
+      }
+      #priv {
+        top: 40%;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body onload="slideImage()">
+    <div class="container">
+      <div class="slide">
+        <img src="./images/" alt="" />
+        <p>1st image</p>
+      </div>
+      <div class="slide">
+        <img src="./images/1680175915263.jpg" alt="" />
+        <p>2nd image</p>
+      </div>
+      <div class="slide">
+        <img src="./images/1680175915282.jpg" alt="" />
+        <p>3rd image</p>
+      </div>
+      <div class="slide">
+        <img src="./images/1680175915306.jpg" alt="" />
+        <p>4th image</p>
+      </div>
+      <div class="slide">
+        <img src="./images/1680175915336.jpg" alt="" />
+        <p>5th image</p>
+      </div>
+      <span class="arrow" id="priv" onclick="slidesShow(-1)"><</span>
+      <span class="arrow" id="next" onclick="slidesShow(1)">></span>
+    </div>
+
+    <script src="./slide_image.js"></script>
+  </body>
+</html>
