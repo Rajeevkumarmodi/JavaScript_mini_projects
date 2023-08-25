@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(63, 63, 83);
+      }
+
+      .container {
+        height: 50vh;
+        width: 50vh;
+        background: url(./images/1680486164065.png);
+        background-size: 100%;
+        border-radius: 50%;
+        border: 5px solid red;
+        position: relative;
+      }
+
+      #hour {
+        height: 28%;
+        width: 2%;
+        background-color: black;
+        position: absolute;
+        left: 49%;
+        top: 23%;
+        border-radius: 5px;
+        transform-origin: bottom;
+      }
+      #minutes {
+        height: 32%;
+        width: 2%;
+        background-color: rgb(66, 252, 4);
+        position: absolute;
+        left: 49%;
+        top: 19%;
+        border-radius: 5px;
+        transform-origin: bottom;
+      }
+      #second {
+        height: 35%;
+        width: 2%;
+        background-color: rgb(250, 5, 5);
+        position: absolute;
+        left: 49%;
+        top: 16%;
+        border-radius: 5px;
+        transform-origin: bottom;
+      }
+
+      .circle {
+        width: 3%;
+        height: 3%;
+        clip-path: circle();
+        background-color: black;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="hour"></div>
+      <div id="minutes"></div>
+      <div id="second"></div>
+    </div>
+    <span class="circle"></span>
+
+    <script src="./clock.js"></script>
+  </body>
+</html>
