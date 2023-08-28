@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        *{
+             margin: 0;
+            padding: 0;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(133, 133, 223);
+        }
+
+        .container{
+            width: 350px;
+            height: 170px;
+            background-color: aqua;
+            border-radius: 10px;
+            text-align: center;
+            padding-inline: 20px;
+        }
+
+        .heading{
+            font-size: 30px;
+            color: blue;
+            margin: 10px 0px 10px 0px;
+        }
+
+        .timeDate{
+            box-shadow: 1px 1px 5px -1px rgb(41, 41, 41);
+            border-radius: 10px;
+        }
+        .time{
+            font-size: 40px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 800; 
+        }
+
+        .date{
+            text-align: start;
+            margin-left: 20px;
+            padding-bottom: 10px;
+            font-weight: 500;
+
+        }
+
+
+    </style>
+</head>
+<body onload="showTime()">
+    <div class="container">
+        <h2 class="heading">Digital Clock</h2>
+        <div class="timeDate">
+            <h2 class="time" id="time"></h2>
+            <p class="date" id="date">Sunday</p>
+        </div>
+    </div>
+
+    <script>
+
+        function showTime(){
+           let dateTime = new Date()
+            // console.log(dateTime);
+           let hour = dateTime.getHours()
+           let min = dateTime.getMinutes()
+           let sec = dateTime.getSeconds()
+           let amPm = 'AM'
+            
+             hour = hour < 10 ? "0"+hour : hour
+             min = min < 10 ? "0"+min : min
+             sec = sec < 10 ? "0"+sec : sec
+
+             if(hour>12){
+                amPm = "PM"
+            }
+            else{
+                amPm = "AM"
+            }
+
+            if(hour > 12){
+                hour = hour - 12;
+            }
+
+             let time = hour +" "+ ":" + " " + min + " " + ":" + " " + sec + " " + amPm
+
+            
+            showDayMonth()
+            document.getElementById('time').innerText = time
+           setTimeout(()=>{
+            showTime();
+           },1000)
+        }
+
+        function showDayMonth(){
+            let dateTime = new Date()
+            let day = dateTime.getDay()
+            let date = dateTime.getDate()
+            let month = dateTime.getMonth()
+            let year = dateTime.getFullYear()
+           
+            date = date < 10 ? "0" + date : date
+            month +=1;
+            month = month < 10 ? "0" + month : month
+
+            switch(day){
+                case 0:
+                    day = "Sunday"
+                break;
+                case 1:
+                    day = "Monday"
+                break;
+                case 2:
+                    day = "Tuesday"
+                break;
+                case 3:
+                    day = "Wednesday"
+                break;
+                case 4:
+                    day = "Thursday"
+                break;
+                case 5:
+                    day = "Friday"
+                break;
+                case 6:
+                    day = "Saturday"
+                break;
+            }
+
+            let dateDetails = day + " - " + date + " - "  + month + " - " + year
+            console.log(dateDetails);
+            document.getElementById('date').innerText = dateDetails
+        }
+
+        console.log(new Date());
+    </script>
+</body>
+</html>
