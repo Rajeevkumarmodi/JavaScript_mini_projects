@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Quiz Website</h2>
+        <div class="quize-contant">
+            <h2 id="qustion">Q1.The latest HTML standard is</h2>
+           <div>
+                <input type="radio" name="q" id="qus1" value="a" class="opt">
+                <label for="qus1" id="options1">HTML 4.0</label>
+           </div>
+
+           <div>
+             <input type="radio" name="q" id="qus2" value="b" class="opt">
+             <label for="qus2" id="options2">HTML 5.0</label>
+
+           </div>
+
+           <div>
+             <input type="radio" name="q" id="qus3" value="c" class="opt">
+             <label for="qus3" id="options3">XML</label>
+           </div>
+
+           <div>
+             <input type="radio" name="q" id="qus4" value="d" class="opt">
+             <label for="qus4" id="options4">SGML</label>
+           </div>
+
+            <button id="submit">Submit</button>
+        </div>
+        <div id="result">
+            <h3 id="score">Your Score is :- </h3>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+
+    <script src="./quiz.js"></script>
+</body>
+</html>
