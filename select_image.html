@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select image</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(135, 135, 237);
+        }
+
+        .continer{
+            width: 500px;
+            height: 400px;
+            background-color: rgb(143, 140, 140);
+            padding: 10px;
+        }
+        .images{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .images img{
+            width: 60%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .allImg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+        }
+
+        .allImg img{
+            width: 18%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <div class="images">
+            <img src="./f1.jpg" alt="" id="mainImg">
+            <div class="allImg">
+                <img src="./images/f1.jpg" alt="" class="smallImg">
+                <img src="./images/f2.jpg" alt="" class="smallImg">
+                <img src="./images/f3.jpg" alt="" class="smallImg">
+                <img src="./images/f4.jpg" alt="" class="smallImg">
+                <img src="./images/f5.jpg" alt="" class="smallImg">
+            </div>
+        </div>
+    </div>
+
+    <script src="./select_image.js"></script>
+</body>
+</html>
