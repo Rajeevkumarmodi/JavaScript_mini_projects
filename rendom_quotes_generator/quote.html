@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotewebsite</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(89, 89, 227);
+        }
+
+        .container{
+            width: 400px;
+            /* height: 210px; */
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .quote_container h2{
+            margin-block:15px ;
+            
+        }
+
+        .quote_container p{
+            margin-block:15px ;
+            margin-bottom: 20px;
+            
+        }
+        .quote_container h4{
+            text-align: end;
+            padding: 0 20px 10px 0;
+            border-bottom: 2pxsolid gray;
+           border-bottom: 2px solid gray;
+
+        }
+
+        #nextBtn{
+            position: relative;
+            left: 110px;
+            margin-top: 10px;
+            padding: 6px 15px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #nextBtn:hover{
+            background-color: rgb(112, 112, 241);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote_container">
+            <h2>Quote of the Day</h2>
+            <p id="quote">Never give up because you never known if the next try is going to be the one that works.</p>
+            <h4 id="author">—— Mary Kay Ash</h4>
+            <button id="nextBtn">Next Quote</button>
+        </div>
+    </div>
+
+    <script src="./quote.js"></script>
+</body>
+</html>
