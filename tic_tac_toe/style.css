@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.players {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.players p {
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.active_player {
+    border-bottom: 3px solid rgb(20, 151, 0);
+    padding-bottom: 2px;
+}
+
+li {
+    list-style: none;
+}
+
+.game_bord {
+    margin-block: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgb(164, 159, 159);
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px gray;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.reset {
+    padding-inline: 20px;
+    padding-block: 10px;
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.winnerBox {
+    padding: 10px;
+    background-color: rgb(247, 4, 231);
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(29, 253, 4);
+    border-radius: 10px;
+    font-size: 22px;
+    visibility: hidden;
+
+}
