@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #ecf0f1;
+}
+
+/* header */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    z-index: 20;
+    padding-inline: 100px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 2px solid gray;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header .logo p span {
+    color: blue;
+}
+
+header .headerLinks ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.headerLinks ul a {
+    color: black;
+}
+
+.closeManu {
+    display: none;
+}
+
+.manuBar {
+    display: none;
+}
+
+/* hero */
+
+.hero {
+    margin-top: 50px;
+    padding-inline: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .heading {
+    font-size: 45px;
+}
+
+.hero .heading span {
+    color: blue;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+    padding-block: 10px;
+}
+
+.cvButton {
+    background-color: rgb(255, 27, 244);
+    width: 130px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.cvButton a {
+    color: white;
+}
+
+.rightHero {
+    margin-top: -100px;
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.rightHero img {
+    height: 600px;
+
+}
+
+
+/* about section */
+
+.aboutSection {
+    padding-inline: 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.aboutSection img {
+    width: 150px;
+    clip-path: circle();
+    background-color: black;
+}
+
+.aboutIntro h2 {
+    text-decoration: underline;
+    padding-block: 5px;
+}
+
+.aboutIntro .great {
+    font-weight: 700;
+}
+
+.aboutIntro p span {
+    color: blue;
+    font-weight: bold;
+}
+
+
+.skills {
+    text-align: center;
+}
+
+.skills h2 {
+    text-decoration: underline;
+    font-weight: 900;
+    padding-block: 10px;
+}
+
+
+.skill {
+    padding-block: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.skill i {
+    font-size: 80px;
+    background-color: rgb(206, 205, 205);
+    padding: 10px;
+    border-radius: 10px;
+    color: #f40606;
+    box-shadow: 0px 7px 5px 0px gray;
+    cursor: pointer;
+}
+
+.skill img {
+    background-color: rgb(206, 205, 205);
+    border-radius: 10px;
+    box-shadow: 0px 7px 5px 0px gray;
+    cursor: pointer;
+}
+
+
+/* project section */
+
+.projectSection {
+    padding-inline: 100px;
+    text-align: center;
+}
+
+
+.projectSection h2 {
+    padding-block: 20px;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.allProject {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px 0px gray;
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.project:hover img {
+    transition: all .5s ease-in-out;
+    transition-duration: 500;
+    transform: scale(1.1);
+}
+
+.project>p {
+    font-weight: 700;
+}
+
+.githubIcon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 25px;
+    color: blue
+}
+
+.details {
+    position: absolute;
+    bottom: -400px;
+    background-color: rgba(8, 8, 8, 0.9);
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.project:hover .details {
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+    bottom: 0px;
+    left: 0;
+}
+
+/* contact section */
+
+#contact {
+    text-align: center;
+    padding-block: 40px;
+    padding-inline: 100px;
+}
+
+#contact h2 {
+    padding-block: 20px;
+}
+
+.contactBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 5px 0px gray;
+    border-radius: 10px;
+}
+
+.contactBox>div img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #4681f4;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* media query */
+
+@media (max-width:768px) {
+
+    header {
+        padding-inline: 20px;
+    }
+
+    .manuBar {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .closeManu {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        position: absolute;
+        left: 10px;
+        color: rgb(243, 54, 54);
+    }
+
+    header .headerLinks .manu {
+        flex-direction: column;
+        gap: 5px;
+        top: 0px;
+        width: 250px;
+        right: -300px;
+        position: absolute;
+        background-color: rgb(144, 144, 144);
+        border-radius: 10px;
+    }
+
+    .activeManu {
+        transition: all 0.5s ease-in-out;
+        flex-direction: column;
+        gap: 5px;
+        top: 0px;
+        width: 250px;
+        right: -20px;
+        position: absolute;
+        background-color: rgb(144, 144, 144);
+        border-radius: 10px;
+    }
+
+    .hero {
+        padding-inline: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .hero .heading {
+        font-size: 30px;
+    }
+
+    .rightHero {
+        display: none;
+    }
+
+
+    .aboutSection {
+        flex-direction: column;
+        padding-inline: 20px;
+        gap: 0px;
+    }
+
+
+
+    .skill i {
+        font-size: 40px;
+    }
+
+    .skill img {
+        width: 60px;
+    }
+
+    .projectSection {
+        padding-inline: 20px;
+    }
+
+    .contactBox>div img {
+        display: none;
+    }
+
+    #contact {
+        padding-inline: 20px;
+    }
+
+    #contact-form {
+        min-width: 100%;
+        align-items: center;
+    }
+
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+        width: 80%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #3498db;
+        border-radius: 5px;
+    }
+}
