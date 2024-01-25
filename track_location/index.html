@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3b3d3f;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .mainDiv {
+        text-align: center;
+      }
+
+      .mainDiv h2 {
+        font-size: 40px;
+        color: white;
+      }
+
+      #btn {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .mainDiv p {
+        margin-top: 10px;
+        color: rgb(238, 238, 241);
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <h2>Track Your Location</h2>
+      <button id="btn">Get Location</button>
+      <div id="result"></div>
+    </div>
+
+    <script src="./script.js" />
+  </body>
+</html>
